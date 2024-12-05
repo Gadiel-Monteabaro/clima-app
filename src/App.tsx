@@ -6,9 +6,8 @@ function App() {
       <div className="container">
         <div className="cards">
           <div className="card first-card">
-            <section>
-              <Form />
-            </section>
+            <h2 className="card-title">clima</h2>
+            <Form />
           </div>
           <div className="card second-card">
             <section></section>
