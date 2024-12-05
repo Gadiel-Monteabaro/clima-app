@@ -23,14 +23,12 @@
   margin: 0;
   padding: 0;
 }
-
 body {
   min-width: 320px;
   min-height: 100vh;
   display: grid;
   align-items: center;
 }
-
 .container {
   display: grid;
   place-items: center;
@@ -64,11 +62,11 @@ body {
   background: var(--first-card-bg);
   box-shadow: var(--shadow-md);
 }
-
 .second-card {
   background: var(--second-card-bg);
   box-shadow: var(--shadow-white);
 }
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
