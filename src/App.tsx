@@ -1,9 +1,21 @@
+import { useEffect, useState } from "react";
 import Form from "./components/Form";
 
 function App() {
+  // Inicializar estado "animacion" para el efecto de transición de carga de elementos
+  const [animacion, setAnimacion] = useState(false);
+
+  // Ejecutar una sola vez el temporizador para cambiar el estado "animacion" al cargar la página
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setAnimacion(true);
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <>
-      <div className="container">
+      <div className={`container ${animacion ? "visible" : ""}`}>
         <div className="cards">
           <div className="card first-card">
             <section>

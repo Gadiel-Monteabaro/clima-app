@@ -36,6 +36,13 @@ body {
   display: grid;
   place-items: center;
   height: 100vh;
+  transform: translateY(-80px);
+  opacity: 0;
+  transition: all ease 1s;
+}
+.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .cards {

@@ -9,9 +9,11 @@ export default function Form() {
     country: "",
   });
 
+  // Función que controla los cambios echos en el formulario, por el evento "e"
   const handleChange = (
     e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLSelectElement>
   ) => {
+    // Actualizar el estado "search" con la propiedad que coincide con el atributo "name" del input
     setSearch({
       ...search,
       [e.target.name]: e.target.value,
