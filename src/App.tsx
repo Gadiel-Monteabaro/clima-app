@@ -6,11 +6,11 @@ function App() {
       <div className="container">
         <div className="cards">
           <div className="card first-card">
-            <div>
+            <section>
               <h2 className="card-title">clima</h2>
               <Form />
-            </div>
-            <div className="card-info">
+            </section>
+            <section className="card-info">
               <p className="first-p-footer">
                 &copy; {new Date().getFullYear()} Gadiel Monteabaro
               </p>
@@ -21,7 +21,7 @@ function App() {
               >
                 <i className="ri-github-fill">GitHub</i>
               </a>
-            </div>
+            </section>
           </div>
           <div className="card second-card">
             <section></section>
