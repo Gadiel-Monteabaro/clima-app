@@ -9,7 +9,7 @@
   --border-radius: 2px;
   --first-card-bg: #27282a;
   --second-card-bg: #f5f5f3;
-  --color-palette: #57cc99;
+  --color-palette: #4cc9f0;
   --card-color: #1e2022;
   --color-white: #fcfcfc;
   --padding-area: 12px;
@@ -75,7 +75,6 @@ body {
 
 .inputs {
   font-weight: bold;
-  text-decoration: none;
   border: none;
   border-radius: var(--border-radius);
   appearance: none;
@@ -98,12 +97,11 @@ body {
   color: var(--color-white);
 }
 .input-submit {
-  color: white;
   text-transform: uppercase;
   font-weight: bold;
   border: none;
   border-radius: var(--border-radius);
-  color: var(--card-color);
+  color: var(--color-white);
   background: var(--color-palette);
   cursor: pointer;
   padding: var(--padding-area);
@@ -113,17 +111,14 @@ body {
 .input-submit:hover {
   opacity: 1;
 }
-
 .first-card .card-info {
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-weight: bold;
   font-size: 12px;
-  margin-top: 12px;
   padding: var(--padding-area);
 }
-
 .first-card .card-info a {
   text-decoration: none;
   color: var(--color-palette);
