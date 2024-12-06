@@ -12,6 +12,7 @@
   --color-palette: #57cc99;
   --card-color: #1e2022;
   --color-white: #fcfcfc;
+  --padding-area: 12px;
   --input-shadow: 0 3px 3px -2px var(--color-palette);
   --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
   --shadow-white: 0 2px 3px -1px rgba(255, 255, 255, 0.2),
@@ -69,7 +70,7 @@ body {
   flex-direction: column;
   gap: 16px;
   width: 100%;
-  padding: 0 16px;
+  padding: 0 var(--padding-area);
 }
 
 .inputs {
@@ -80,7 +81,7 @@ body {
   appearance: none;
   width: 100%;
   opacity: 0.7;
-  padding: 12px;
+  padding: var(--padding-area);
   transition: all ease-in-out 250ms;
 }
 .inputs:hover {
@@ -105,7 +106,7 @@ body {
   color: var(--card-color);
   background: var(--color-palette);
   cursor: pointer;
-  padding: 12px;
+  padding: var(--padding-area);
   opacity: 0.7;
   transition: opacity ease 250ms;
 }
@@ -120,7 +121,7 @@ body {
   font-weight: bold;
   font-size: 12px;
   margin-top: 12px;
-  padding: 16px;
+  padding: var(--padding-area);
 }
 
 .first-card .card-info a {
