@@ -23,9 +23,7 @@ function App() {
               <Form />
             </section>
             <section className="card-info">
-              <p className="first-p-footer">
-                &copy; {new Date().getFullYear()} Gadiel Monteabaro
-              </p>
+              <p>&copy; {new Date().getFullYear()} Gadiel Monteabaro</p>
               <a
                 href="https://github.com/Gadiel-Monteabaro/clima-app"
                 className="link-git"
