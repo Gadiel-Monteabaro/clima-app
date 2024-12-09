@@ -22,14 +22,15 @@ export default function Form() {
     });
   };
 
-  // Función
+  // Función que valida que los campos fueron completados correctamente
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
+    // Si los campos estan vacios, actualizar el estado "alert", con un mensaje de aviso
     if (Object.values(search).includes("")) {
       setAlert("Todos los campos son obligatorios");
       return;
     }
+    // sino, dejar el estado "alert"vacio
     setAlert("");
   };
 
