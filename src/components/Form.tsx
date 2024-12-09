@@ -1,6 +1,7 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 import { countries } from "../data/countries";
 import type { SearchType } from "../types";
+import Alert from "./Alert";
 
 export default function Form() {
   // Inicializar el estado "search" con un objeto, que contiene las propiedades "city" y "country" sin valores
@@ -8,6 +9,7 @@ export default function Form() {
     city: "",
     country: "",
   });
+  const [alert, setAlert] = useState("");
 
   // Función que controla los cambios echos en el formulario, por el evento "e"
   const handleChange = (
@@ -20,14 +22,25 @@ export default function Form() {
     });
   };
 
+  // Función
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (Object.values(search).includes("")) {
+      setAlert("Todos los campos son obligatorios");
+      return;
+    }
+    setAlert("");
+  };
+
   return (
-    <form className="form-clima">
+    <form className="form-clima" onSubmit={handleSubmit}>
       <div>
         <select
           className="form-select inputs"
           id="country"
           name="country"
-          value={search.city}
+          value={search.country}
           onChange={handleChange}
         >
           <option value="">Seleccione un país</option>
@@ -51,6 +64,7 @@ export default function Form() {
         />
       </div>
       <input className="input-submit" type="submit" value={"Consultar clima"} />
+      {alert && <Alert alert={alert}>Todos los campos son obligatorios</Alert>}
     </form>
   );
 }

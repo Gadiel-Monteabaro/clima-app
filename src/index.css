@@ -136,6 +136,28 @@ body {
 .first-card .card-info a:hover {
   opacity: 1;
 }
+.alert {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  font-weight: bold;
+  border-radius: 8px;
+  margin: 8px auto;
+  font-size: 14px;
+  padding: 6px 0;
+  box-shadow: 0 3px 3px -2px #d92525;
+  width: 80%;
+  animation: alert 250ms 1 linear;
+  animation-fill-mode: forwards;
+}
+@keyframes alert {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 .second-card {
   background: var(--second-card-bg);
