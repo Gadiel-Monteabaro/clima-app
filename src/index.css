@@ -45,13 +45,11 @@ body {
   transform: translateY(0);
 }
 
-/*
 .cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
-*/
 .card {
   background: var(--card-bg);
   box-shadow: var(--shadow);
@@ -171,7 +169,18 @@ body {
   border-radius: var(--border-radius);
   margin-top: 24px;
   box-shadow: 0 0 4px -1px rgb(255, 255, 255), 0 0 6px -2px rgb(255, 255, 255);
+  animation: alert 250ms 1 linear;
+  animation-fill-mode: forwards;
 }
+@keyframes weather {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .weather-name {
   color: var(--first-card-bg);
   font-weight: bold;
@@ -203,6 +212,11 @@ body {
   color: var(--first-card-bg);
   font-weight: bold;
   text-align: center;
+}
+
+.second-card {
+  background: var(--second-card-bg);
+  box-shadow: var(--shadow-white);
 }
 
 @media (prefers-color-scheme: light) {

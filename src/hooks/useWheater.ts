@@ -1,7 +1,7 @@
 import axios from "axios";
 import { z } from "zod";
 import { SearchType } from "../types";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
 const weatherSchema = z.object({
   main: z.string(),
@@ -74,10 +74,13 @@ export default function useWeather() {
     }
   };
 
+  const hasWeatherData = useMemo(() => weather.name, [weather]);
+
   return {
     weather,
     loading,
     notFound,
     fetchWeather,
+    hasWeatherData,
   };
 }
