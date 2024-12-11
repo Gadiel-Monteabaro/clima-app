@@ -45,11 +45,13 @@ body {
   transform: translateY(0);
 }
 
+/*
 .cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
+*/
 .card {
   background: var(--card-bg);
   box-shadow: var(--shadow);
@@ -68,7 +70,8 @@ body {
 
 .first-card {
   display: grid;
-  grid-template-rows: 4fr 1fr;
+  grid-template-rows: 2fr 2fr 1fr;
+  gap: 10px;
   background: var(--first-card-bg);
   box-shadow: var(--shadow-md);
 }
@@ -159,9 +162,47 @@ body {
   }
 }
 
-.second-card {
-  background: var(--second-card-bg);
-  box-shadow: var(--shadow-white);
+.weather-details {
+  background-image: url("../public/Dia\ soleado.png");
+  filter: grayscale(50%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: var(--border-radius);
+  margin-top: 24px;
+  box-shadow: 0 0 4px -1px rgb(255, 255, 255), 0 0 6px -2px rgb(255, 255, 255);
+}
+.weather-name {
+  color: var(--first-card-bg);
+  font-weight: bold;
+  font-size: 14px;
+  padding: 16px;
+}
+.weather-name span {
+  margin-right: 4px;
+}
+.weather-temp {
+  display: flex;
+  justify-content: center;
+  color: var(--first-card-bg);
+  font-weight: bold;
+  text-align: center;
+  font-size: 3rem;
+  gap: 7px;
+}
+.temp-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.state-container img {
+  display: block;
+}
+.weather-state {
+  color: var(--first-card-bg);
+  font-weight: bold;
+  text-align: center;
 }
 
 @media (prefers-color-scheme: light) {

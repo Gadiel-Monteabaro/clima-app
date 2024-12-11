@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import Form from "./components/Form";
 import useWeather from "./hooks/useWheater";
+import { formatTemperature } from "./utils";
 
 function App() {
+  const { fetchWeather, weather } = useWeather();
   // Inicializar estado "animacion" para el efecto de transición de carga de elementos
   const [animacion, setAnimacion] = useState(false);
 
@@ -15,7 +17,6 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  const { fetchWeather } = useWeather();
   return (
     <>
       <div className={`container ${animacion ? "visible" : ""}`}>
@@ -24,6 +25,29 @@ function App() {
             <section>
               <h2 className="card-title">clima</h2>
               <Form fetchWeather={fetchWeather} />
+            </section>
+            <section className="weather-details">
+              <div>
+                <p className="weather-name">
+                  <span>
+                    <i className="ri-map-pin-2-line"></i>
+                  </span>
+                  {weather.name}{" "}
+                </p>
+              </div>
+              <div className="temp-container">
+                <div className="state-container">
+                  <img
+                    src={`https://openweathermap.org/img/w/${weather.weather[0].icon}.png`}
+                    alt={`icono de clima ${weather.name}`}
+                  />
+                  <p className="weather-state">{weather.weather[0].main}</p>
+                </div>
+
+                <p className="weather-temp">
+                  {formatTemperature(weather.main.temp)}&deg;C
+                </p>
+              </div>
             </section>
             <section className="card-info">
               <p>&copy; {new Date().getFullYear()} Gadiel Monteabaro</p>
@@ -35,9 +59,6 @@ function App() {
                 <i className="ri-github-fill">GitHub</i>
               </a>
             </section>
-          </div>
-          <div className="card second-card">
-            <section></section>
           </div>
         </div>
       </div>
