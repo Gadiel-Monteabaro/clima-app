@@ -3,7 +3,11 @@ import { countries } from "../data/countries";
 import type { SearchType } from "../types";
 import Alert from "./Alert";
 
-export default function Form() {
+type FormProps = {
+  fetchWeather: (search: SearchType) => Promise<void>;
+};
+
+export default function Form({ fetchWeather }: FormProps) {
   // Inicializar el estado "search" con un objeto, que contiene las propiedades "city" y "country" sin valores
   const [search, setSearch] = useState<SearchType>({
     city: "",
@@ -32,6 +36,8 @@ export default function Form() {
     }
     // sino, dejar el estado "alert"vacio
     setAlert("");
+
+    fetchWeather(search);
   };
 
   return (

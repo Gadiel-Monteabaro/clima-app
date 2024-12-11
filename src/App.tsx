@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Form from "./components/Form";
+import useWeather from "./hooks/useWheater";
 
 function App() {
   // Inicializar estado "animacion" para el efecto de transición de carga de elementos
@@ -13,6 +14,8 @@ function App() {
 
     return () => clearTimeout(timer);
   }, []);
+
+  const { fetchWeather } = useWeather();
   return (
     <>
       <div className={`container ${animacion ? "visible" : ""}`}>
@@ -20,7 +23,7 @@ function App() {
           <div className="card first-card">
             <section>
               <h2 className="card-title">clima</h2>
-              <Form />
+              <Form fetchWeather={fetchWeather} />
             </section>
             <section className="card-info">
               <p>&copy; {new Date().getFullYear()} Gadiel Monteabaro</p>
