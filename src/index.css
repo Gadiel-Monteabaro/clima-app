@@ -62,7 +62,6 @@ body {
 }
 
 .first-card {
-  position: relative;
   display: grid;
   grid-template-rows: 2fr 2fr 1fr;
   gap: 10px;
@@ -116,15 +115,11 @@ body {
   opacity: 1;
 }
 .first-card .card-info {
-  position: absolute;
-  bottom: 25px;
-  left: 50px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-weight: bold;
   font-size: 12px;
-  gap: 33px;
   padding: var(--padding-area);
 }
 .first-card .card-info a {
@@ -163,7 +158,7 @@ body {
 }
 
 .weather-details {
-  filter: grayscale(80%);
+  filter: grayscale(50%);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -187,7 +182,6 @@ body {
 }
 .bg-night {
   background-image: url("../public/night.jpg");
-
   box-shadow: var(--shadow-md);
   border: 1px solid var(--card-color);
 }
