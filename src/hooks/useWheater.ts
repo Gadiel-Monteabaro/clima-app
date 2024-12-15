@@ -20,7 +20,7 @@ const Weather = z.object({
 });
 export type Weather = z.infer<typeof Weather>;
 
-const initialState = {
+export const initialState = {
   name: "",
   main: {
     temp: 0,
@@ -53,6 +53,9 @@ export default function useWeather() {
 
       if (!data[0]) {
         setNotFound(true);
+        setTimeout(() => {
+          setNotFound(false);
+        }, 3000);
         return;
       }
 
@@ -77,6 +80,7 @@ export default function useWeather() {
   const hasWeatherData = useMemo(() => weather.name, [weather]);
 
   return {
+    setWeather,
     weather,
     loading,
     notFound,

@@ -1,24 +1,28 @@
 :root {
+  /* Tipografia y colores */
   font-family: "Montserrat", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
   background-color: #1f2022;
+  color-scheme: light dark;
+  color: #ffffffde;
 
-  --border-radius: 2px;
-  --first-card-bg: #27282a;
-  --second-card-bg: #f5f5f3;
+  /* colores */
   --color-palette: #4cc9f0;
-  --card-color: #1e2022;
+  --second-card-bg: #f5f5f3;
   --color-white: #fcfcfc;
+  --first-card-bg: #27282a;
+  --card-color: #1e2022;
+
+  /* Bordes y sombras */
+  --border-radius: 2px;
   --padding-area: 12px;
-  --input-shadow: 0 3px 3px -2px var(--color-palette);
   --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
   --shadow-white: 0 2px 3px -1px rgba(255, 255, 255, 0.2),
     0 2px 4px -2px rgba(255, 255, 255, 0.2);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.2),
     0 2px 4px -2px rgba(0, 0, 0, 0.2);
+  --input-shadow: 0 3px 3px -2px var(--color-palette);
 }
 
 * {
@@ -51,6 +55,7 @@ body {
   border-radius: var(--border-radius);
   min-width: 400px;
   max-height: 550px;
+  min-height: 550px;
 }
 .card-title {
   text-transform: uppercase;
@@ -63,10 +68,14 @@ body {
 
 .first-card {
   display: grid;
-  grid-template-rows: 2fr 2fr 1fr;
+  grid-template-rows: 2fr;
   gap: 10px;
   background: var(--first-card-bg);
   box-shadow: var(--shadow-md);
+}
+.grid-3 {
+  display: grid;
+  grid-template-rows: 2fr;
 }
 .form-clima {
   display: flex;
@@ -86,11 +95,7 @@ body {
   padding: var(--padding-area);
   transition: all ease-in-out 250ms;
 }
-.inputs:hover {
-  outline: none;
-  box-shadow: var(--input-shadow);
-  opacity: 1;
-}
+.inputs:hover,
 .inputs:focus {
   outline: none;
   box-shadow: var(--input-shadow);
@@ -116,16 +121,18 @@ body {
 }
 .first-card .card-info {
   display: flex;
+  max-height: 3rem;
   justify-content: space-around;
   align-items: center;
   font-weight: bold;
   font-size: 12px;
+  margin-bottom: 14px;
   padding: var(--padding-area);
 }
 .first-card .card-info a {
   text-decoration: none;
   color: var(--color-palette);
-  font-size: 16px;
+  font-size: 12px;
   opacity: 0.7;
   transition: opacity ease 350ms;
 }
@@ -145,10 +152,21 @@ body {
   padding: 6px 0;
   box-shadow: 0 3px 3px -2px #d92525;
   width: 80%;
-  animation: alert 250ms 1 linear;
+  animation: fade-in 250ms 1 linear;
   animation-fill-mode: forwards;
 }
-@keyframes alert {
+.weather-details {
+  min-height: 200px;
+  filter: grayscale(50%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: var(--border-radius);
+  margin-top: 24px;
+  animation: fade-in 250ms 1 linear;
+  animation-fill-mode: forwards;
+}
+@keyframes fade-in {
   0% {
     opacity: 0;
   }
@@ -157,26 +175,8 @@ body {
   }
 }
 
-.weather-details {
-  filter: grayscale(50%);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: var(--border-radius);
-  margin-top: 24px;
-  animation: alert 250ms 1 linear;
-  animation-fill-mode: forwards;
-}
-@keyframes weather {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .bg-day {
-  background-image: url("../public/Dia\ soleado.png");
+  background-image: url("../public/day.png");
   box-shadow: 0 0 4px -1px rgb(255, 255, 255), 0 0 6px -2px rgb(255, 255, 255);
   border: 1px solid #ffff;
 }
@@ -217,6 +217,15 @@ body {
   color: var(--first-card-bg);
   font-weight: bold;
   text-align: center;
+}
+.temp-details {
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--first-card-bg);
+  margin-top: 1rem;
+  gap: 26px;
 }
 
 .second-card {

@@ -15,4 +15,11 @@ export type Weather = {
     temp_max: number;
     temp_min: number;
   };
+  weather: [
+    {
+      main: string;
+      description: string;
+      icon: string;
+    }
+  ];
 };

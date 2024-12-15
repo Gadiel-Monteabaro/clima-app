@@ -1,12 +1,20 @@
-import { ChangeEvent, FormEvent, useState } from "react";
+import {
+  ChangeEvent,
+  Dispatch,
+  FormEvent,
+  SetStateAction,
+  useState,
+} from "react";
 import { countries } from "../data/countries";
 import type { SearchType } from "../types";
 import Alert from "./Alert";
+import { initialState, Weather } from "../hooks/useWheater";
 
 type FormProps = {
   fetchWeather: (search: SearchType) => Promise<void>;
+  setWeather: Dispatch<SetStateAction<Weather>>;
 };
-export default function Form({ fetchWeather }: FormProps) {
+export default function Form({ fetchWeather, setWeather }: FormProps) {
   // Inicializar el estado "search" con un objeto, que contiene las propiedades "city" y "country" sin valores
   const [search, setSearch] = useState<SearchType>({
     city: "",
@@ -30,6 +38,7 @@ export default function Form({ fetchWeather }: FormProps) {
     e.preventDefault();
     // Si los campos estan vacios, actualizar el estado "alert", con un mensaje de aviso
     if (Object.values(search).includes("")) {
+      setWeather(initialState);
       setAlert("Todos los campos son obligatorios");
       return;
     }
@@ -70,7 +79,7 @@ export default function Form({ fetchWeather }: FormProps) {
         />
       </div>
       <input className="input-submit" type="submit" value={"Consultar clima"} />
-      {alert && <Alert alert={alert}>Todos los campos son obligatorios</Alert>}
+      {alert && <Alert>Todos los campos son obligatorios</Alert>}
     </form>
   );
 }

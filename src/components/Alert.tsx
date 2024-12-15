@@ -1,13 +1,12 @@
 import { ReactNode } from "react";
 
 type AlertProps = {
-  alert: string;
   children: ReactNode;
 };
 
-export default function Alert({ children, alert }: AlertProps) {
+export default function Alert({ children }: AlertProps) {
   return (
-    <div className={` ${alert ? "alert" : ""}`}>
+    <div className="alert">
       <i className="ri-error-warning-line"></i>
       {children}
     </div>
