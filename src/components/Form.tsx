@@ -49,37 +49,43 @@ export default function Form({ fetchWeather, setWeather }: FormProps) {
   };
 
   return (
-    <form className="form-clima" onSubmit={handleSubmit}>
-      <div>
-        <select
-          className="form-select inputs"
-          id="country"
-          name="country"
-          value={search.country}
-          onChange={handleChange}
-        >
-          <option value="">Seleccione un país</option>
-          {countries.map((country) => (
-            <option key={country.code} value={country.code}>
-              {country.name}
-            </option>
-          ))}
-        </select>
-      </div>
-      <div>
+    <>
+      <form className="form-clima" onSubmit={handleSubmit}>
+        <div>
+          <select
+            className="form-select inputs"
+            id="country"
+            name="country"
+            value={search.country}
+            onChange={handleChange}
+          >
+            <option value="">Seleccione un país</option>
+            {countries.map((country) => (
+              <option key={country.code} value={country.code}>
+                {country.name}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <input
+            className="input-city inputs"
+            id="city"
+            name="city"
+            type="text"
+            placeholder="Ingrese una ciudad"
+            autoComplete="off"
+            value={search.city}
+            onChange={handleChange}
+          />
+        </div>
         <input
-          className="input-city inputs"
-          id="city"
-          name="city"
-          type="text"
-          placeholder="Ingrese una ciudad"
-          autoComplete="off"
-          value={search.city}
-          onChange={handleChange}
+          className="input-submit"
+          type="submit"
+          value={"Consultar clima"}
         />
-      </div>
-      <input className="input-submit" type="submit" value={"Consultar clima"} />
+      </form>
       {alert && <Alert>Todos los campos son obligatorios</Alert>}
-    </form>
+    </>
   );
 }
