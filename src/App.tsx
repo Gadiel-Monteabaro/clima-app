@@ -26,6 +26,7 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
+  // Declarar la variable "hour" que almacena la hora actual
   const hour = new Date().getHours();
 
   return (

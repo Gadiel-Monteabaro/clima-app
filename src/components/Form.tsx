@@ -38,6 +38,7 @@ export default function Form({ fetchWeather, setWeather }: FormProps) {
     e.preventDefault();
     // Si los campos estan vacios, actualizar el estado "alert", con un mensaje de aviso
     if (Object.values(search).includes("")) {
+      // Si los campos estan vacios y el usuario ya efectuo una busqueda, actualizar el estado "weather" con su estado inicial
       setWeather(initialState);
       setAlert("Todos los campos son obligatorios");
       return;
