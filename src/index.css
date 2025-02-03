@@ -1,5 +1,4 @@
 :root {
-<<<<<<< HEAD
   /* Tipografia y colores */
   font-family: "Montserrat", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -7,8 +6,6 @@
   background-color: #1f2022;
   color-scheme: light dark;
   color: #ffffffde;
-=======
->>>>>>> 44e86f7 (actualización)
 
   /* colores */
   --color-palette: #4cc9f0;
@@ -33,28 +30,12 @@
   margin: 0;
   padding: 0;
 }
-<<<<<<< HEAD
 body {
   min-width: 320px;
   min-height: 100vh;
   display: grid;
   align-items: center;
 }
-=======
-
-body {
-  min-width: 320px;
-  min-height: 100vh;
-  font-family: "Montserrat", system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  display: grid;
-  background-color: #1f2022;
-  align-items: center;
-  color: #ffffffde;
-}
-
->>>>>>> 44e86f7 (actualización)
 .container {
   display: grid;
   place-items: center;
@@ -63,10 +44,6 @@ body {
   opacity: 0;
   transition: all ease 1s;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 44e86f7 (actualización)
 .visible {
   opacity: 1;
   transform: translateY(0);
@@ -80,19 +57,10 @@ body {
   max-height: 550px;
   min-height: 550px;
 }
-<<<<<<< HEAD
 .card-title {
   text-transform: uppercase;
   text-align: center;
   font-size: 1rem; /* 16px */
-=======
-
-.card-title {
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 1rem;
-  /* 16px */
->>>>>>> 44e86f7 (actualización)
   font-weight: 800;
   width: 80%;
   margin: 20px auto;
@@ -105,18 +73,10 @@ body {
   background: var(--first-card-bg);
   box-shadow: var(--shadow-md);
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 44e86f7 (actualización)
 .grid-3 {
   display: grid;
   grid-template-rows: 2fr;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 44e86f7 (actualización)
 .form-clima {
   display: flex;
   flex-direction: column;
@@ -135,27 +95,20 @@ body {
   padding: var(--padding-area);
   transition: all ease-in-out 250ms;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 44e86f7 (actualización)
 .inputs:hover,
 .inputs:focus {
   outline: none;
   box-shadow: var(--input-shadow);
   opacity: 1;
 }
-<<<<<<< HEAD
 .inputs::placeholder {
   color: var(--color-white);
 }
-=======
 
 .inputs::placeholder {
   color: var(--color-white);
 }
 
->>>>>>> 44e86f7 (actualización)
 .input-submit {
   text-transform: uppercase;
   font-weight: bold;
@@ -168,17 +121,9 @@ body {
   opacity: 0.7;
   transition: opacity ease 250ms;
 }
-<<<<<<< HEAD
 .input-submit:hover {
   opacity: 1;
 }
-=======
-
-.input-submit:hover {
-  opacity: 1;
-}
-
->>>>>>> 44e86f7 (actualización)
 .first-card .card-info {
   display: flex;
   max-height: 3rem;
@@ -189,10 +134,6 @@ body {
   margin-bottom: 14px;
   padding: var(--padding-area);
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 44e86f7 (actualización)
 .first-card .card-info a {
   text-decoration: none;
   color: var(--color-palette);
@@ -200,17 +141,9 @@ body {
   opacity: 0.7;
   transition: opacity ease 350ms;
 }
-<<<<<<< HEAD
 .first-card .card-info a:hover {
   opacity: 1;
 }
-=======
-
-.first-card .card-info a:hover {
-  opacity: 1;
-}
-
->>>>>>> 44e86f7 (actualización)
 .alert {
   top: 170px;
   left: 10%;
@@ -227,10 +160,6 @@ body {
   animation: fade-in 250ms 1 linear;
   animation-fill-mode: forwards;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 44e86f7 (actualización)
 .weather-details {
   min-height: 200px;
   filter: grayscale(50%);
@@ -242,18 +171,10 @@ body {
   animation: fade-in 250ms 1 linear;
   animation-fill-mode: forwards;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 44e86f7 (actualización)
 @keyframes fade-in {
   0% {
     opacity: 0;
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> 44e86f7 (actualización)
   100% {
     opacity: 1;
   }
@@ -264,10 +185,6 @@ body {
   box-shadow: 0 0 4px -1px rgb(255, 255, 255), 0 0 6px -2px rgb(255, 255, 255);
   border: 1px solid #ffff;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 44e86f7 (actualización)
 .bg-night {
   background-image: url("../public/night.jpg");
   box-shadow: var(--shadow-md);
@@ -280,17 +197,9 @@ body {
   font-size: 14px;
   padding: 16px;
 }
-<<<<<<< HEAD
 .weather-name span {
   margin-right: 4px;
 }
-=======
-
-.weather-name span {
-  margin-right: 4px;
-}
-
->>>>>>> 44e86f7 (actualización)
 .weather-temp {
   display: flex;
   justify-content: center;
@@ -300,36 +209,20 @@ body {
   font-size: 3rem;
   gap: 7px;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 44e86f7 (actualización)
 .temp-container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 12px;
 }
-<<<<<<< HEAD
 .state-container img {
   display: block;
 }
-=======
-
-.state-container img {
-  display: block;
-}
-
->>>>>>> 44e86f7 (actualización)
 .weather-state {
   color: var(--first-card-bg);
   font-weight: bold;
   text-align: center;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 44e86f7 (actualización)
 .temp-details {
   display: flex;
   justify-content: center;
@@ -350,17 +243,9 @@ body {
     color: #213547;
     background-color: #ffffff;
   }
-<<<<<<< HEAD
   a:hover {
     color: #747bff;
   }
-=======
-
-  a:hover {
-    color: #747bff;
-  }
-
->>>>>>> 44e86f7 (actualización)
   button {
     background-color: #f9f9f9;
   }
@@ -396,43 +281,23 @@ body {
 }
 
 @-webkit-keyframes sk-bounce {
-<<<<<<< HEAD
-=======
-
->>>>>>> 44e86f7 (actualización)
   0%,
   100% {
     -webkit-transform: scale(0);
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> 44e86f7 (actualización)
   50% {
     -webkit-transform: scale(1);
   }
 }
 
 @keyframes sk-bounce {
-<<<<<<< HEAD
-=======
-
->>>>>>> 44e86f7 (actualización)
   0%,
   100% {
     transform: scale(0);
     -webkit-transform: scale(0);
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> 44e86f7 (actualización)
   50% {
     transform: scale(1);
     -webkit-transform: scale(1);
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 44e86f7 (actualización)
