@@ -1,6 +1,4 @@
-:root {
-
-  /* colores */
+:root {  /* colores */
   --color-palette: #4cc9f0;
   --second-card-bg: #f5f5f3;
   --color-white: #fcfcfc;
@@ -28,8 +26,9 @@ body {
   min-width: 320px;
   min-height: 100vh;
   font-family: "Montserrat", system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  line-height: 1.5;  
   font-weight: 400;
+
   display: grid;
   background-color: #1f2022;
   align-items: center;
